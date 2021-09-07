@@ -28,13 +28,14 @@
           required
         ></b-form-input>
       </b-form-group>
-      <b-button type="submit" variant="primary">Login</b-button>
+      <b-button type="submit" variant="secondary">Login</b-button>
       <b-button type="reset" variant="danger">Reset</b-button>
 
     </b-form>
     </b-col>
     </b-row>
     </b-container>
+    <!-- <addblog> -->
     
    
   </div>
@@ -47,12 +48,9 @@
 import details from './details.json'
 
 
-
   export default {
-      name:'Form',
+      name:'Login',
 components:{
-  
-
 },
      
     data() {
@@ -68,34 +66,33 @@ components:{
     },
      
     methods: {
-      onSubmit(event) {
-         this.$router.push({path: '/addBlog'});
-          
+      onSubmit(event) {    
 
-          console.log("details",details,"-------------------")
+
+      this.$router.push({path: '/addBlog'});
+      
+          console.log("details")
         event.preventDefault()
-       
+
           console.log("details",details,this.form)
           let flag=false;
         details.forEach((detail)=>{
           if(this.form.email==detail.username&& this.form.password==detail.password)
-          flag=true
-                //this.$router.push({name : Questions})
-       
-           
+          flag=true    
+              
        
         });
-        if(flag) alert(" login successful")
+        if(flag){alert(" login successful")
+        }
+        else { alert("please login again")  
+      
+       } },
+             
        
-        else  alert("please login again")
-       
-        },
 
 
-    
- 
-    
-  
+
+      
       onReset(event) {
         event.preventDefault()
         // Reset our form values
