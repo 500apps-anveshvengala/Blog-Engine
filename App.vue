@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    
+    <hr>
+ <router-view></router-view>
   
-    <Login></Login>
+    <Login />
   </div>
 </template>
 
@@ -10,13 +11,13 @@
 
 
 import Login from './components/Login.vue'
-
-
-
 export default {
   name: 'App',
   components: {
-    Login,
-  }
+   Login,
+ 
+  },
+ 
 }
 </script>
+
