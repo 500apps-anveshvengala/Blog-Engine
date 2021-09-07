@@ -11,7 +11,9 @@
             <input type="text" v-model.lazy="blog.authorname" required/>
             <p>Date</p>
             <input type="date" v-model="date">
-            <label>Comments</label>
+            <br>
+            <label>Comments</label><br>
+            
             <input type="text" v-model.lazy="blog.comments" placeholder="Hey..  say something" required/>
             
         </form>
